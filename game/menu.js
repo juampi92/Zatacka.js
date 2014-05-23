@@ -19,20 +19,17 @@ var Menu = {
 		init: function(callback) {
 			Menu.detectarTeclas.teclas = [];
 			Menu.detectarTeclas.callback = callback;
-			window.onKeyup = function(e){
-				console.log("hola");
-				Menu.detectarTeclas.keyup(e);};
+			window.onkeyup = Menu.detectarTeclas.keyup;
 
 		},
 		keyup: function(e) {
-			console.log("termine");
 			Menu.detectarTeclas.teclas.push(e.which);
 			if (Menu.detectarTeclas.teclas.length > 1)
 				Menu.detectarTeclas.end();
 		},
 		end: function() {
 			Menu.detectarTeclas.callback(Menu.detectarTeclas.teclas);
-			window.onKeyup = null;
+			window.onkeyup = null;
 		}
 	}
 
