@@ -9,14 +9,15 @@
 		<title>Zataka.js</title>
 	</head>
 	<body>
-		<menu> 
+		<div id="menu"> 
 			<input type="text" placeholder="Nombre jugador nuevo" id="playerName"> 
 			<button id="addp">Add Player</button>
-		
-		</menu>
+			<ul id="players"></ul>
+		</div>
 		<canvas id="canvas" style="display:none;">Tu navegador no soporta Canvas</canvas>
 		
 		<script src="game/menu.js"></script>
+		<script src="game/players.js"></script>
 		<script src="game/game.js"></script>
 
 	</body>
