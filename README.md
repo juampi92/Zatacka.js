@@ -1,4 +1,4 @@
-Zataka.js
+Zatacka.js
 =========
 
-Javascript implementation of the game Zataka
+Javascript implementation of the game Zatacka
