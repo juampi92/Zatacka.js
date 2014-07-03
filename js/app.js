@@ -111,13 +111,8 @@
     },
     draw: function(coords,color){
       var ctx = GameCanvas.ctx;
-      ctx.beginPath();
-      ctx.moveTo(this.x + coords.x-1, this.y + coords.y);
-      ctx.lineTo(this.x + coords.x, this.y + coords.y+1);
-      ctx.closePath();
-      ctx.strokeStyle = color;
-      ctx.lineWidth = 4;
-      ctx.stroke();
+      ctx.fillStyle = color;
+      ctx.fillRect(this.x + coords.x,this.y + coords.y,2,2);
     }
   };
 
